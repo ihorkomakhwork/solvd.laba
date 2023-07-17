@@ -1,0 +1,11 @@
+{
+  "name": "1-stringoperation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stringUtil.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "",
+  "license": "ISC"
+}
