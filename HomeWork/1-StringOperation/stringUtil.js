@@ -19,17 +19,17 @@ const plus = (argA, argB) => {
   return result;
 }
 
-const minus = (num1, num2) => {
+const minus = (argA, argB) => {
   let result = '';
   let borrow = 0;
-  let i = num1.length - 1;
-  let j = num2.length - 1;
+  let i = argA.length - 1;
+  let j = argB.length - 1;
 
   while (i >= 0 || j >= 0) {
-    const digit1 = i >= 0 ? parseInt(num1[i]) : 0;
-    const digit2 = j >= 0 ? parseInt(num2[j]) : 0;
+    const digitA = i >= 0 ? parseInt(argA[i]) : 0;
+    const digitB = j >= 0 ? parseInt(argB[j]) : 0;
 
-    let diff = digit1 - borrow - digit2;
+    let diff = digitA - borrow - digitB;
 
     if (diff < 0) {
       diff += 10;
@@ -46,14 +46,14 @@ const minus = (num1, num2) => {
   return result || '0';
 };
  
-const multiply = (num1, num2) => {
-    const m = num1.length;
-    const n = num2.length;
+const multiply = (argA, argB) => {
+    const m = argA.length;
+    const n = argB.length;
     const result = Array(m + n).fill(0);
   
     for (let i = m - 1; i >= 0; i--) {
       for (let j = n - 1; j >= 0; j--) {
-        const product = parseInt(num1[i]) * parseInt(num2[j]);
+        const product = parseInt(argA[i]) * parseInt(argB[j]);
         const p1 = i + j;
         const p2 = i + j + 1;
         const sum = product + result[p2];
@@ -71,14 +71,14 @@ const multiply = (num1, num2) => {
 };
 
 
-const divide = (str1, str2) => {
+const divide = (argA, argB) => {
   let result = "";
   let remainder = 0;
   let i = 0;
-  while (i < str1.length) {
-      let dividend = remainder * 10 + parseInt(str1[i]);
-      let quotient = Math.floor(dividend / str2);
-      remainder = dividend % str2;
+  while (i < argA.length) {
+      let dividend = remainder * 10 + parseInt(argA[i]);
+      let quotient = Math.floor(dividend / argB);
+      remainder = dividend % argB;
       result += quotient;
       i++;
   }
