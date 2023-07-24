@@ -1,17 +1,9 @@
-const linkedTypes = {
-    object: JSON.stringify,
-    function: JSON.stringify,
-};
+'use strict';
 
 const stringifyValue = value => {
-
-    console.log('stringifyValue');
-    /*
-    const type = typeof data;
-    const serializer = linkedTypes[type];
-    if (serializer) return serializer(data)
-    else return data.toString()
-*/
+    const type = typeof value; 
+    if (type == 'object') return JSON.stringify(value);
+    else return value.toString();
 };
 
 module.exports = { stringifyValue };
