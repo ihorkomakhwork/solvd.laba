@@ -14,9 +14,13 @@ const addValues = (argA , argB)  => {
 const coerceToType = (value, type) => {
     const valid = validateType(type ,['string', 'number', 'boolean'])
     if (!valid) throw new Error('Invalid type of argument'); 
-    if (type == 'number') return convertToNumber(value);
-    if (type == 'boolean') return Boolean(value);
-    if (type == 'string') return stringifyValue(value);
+    try {
+        if (type == 'number') return convertToNumber(value);
+        if (type == 'boolean') return Boolean(value);
+        if (type == 'string') return stringifyValue(value);
+    } catch (error) { 
+        throw new Error('Impossible to correct', error); 
+    };
 };
 
-module.exports = { addValues, coerceToType };   
+module.exports = { addValues, coerceToType };
