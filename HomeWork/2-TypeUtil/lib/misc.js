@@ -20,5 +20,4 @@ const coerceToType = (value, type) => {
     throw new Error('Invalid type of argument');
 };
 
-console.log(coerceToType(true , 'number'));
 module.exports = { addValues, coerceToType };   
