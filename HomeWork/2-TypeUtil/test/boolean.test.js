@@ -8,8 +8,10 @@ describe('invertBoolean', () => {
         assert.equal(result, false);
     });
     it('False', () => {
-        const result = convertToBoolean(false);
+        const result = invertBoolean(false);
         assert.equal(result, true);
     });
-    it('Number', () => assert.throws(() => convertToBoolean(123), new Error('Invalid type of argument')  ));
+    it('Number', () => assert.throws(() => invertBoolean(123), new Error('Invalid type of argument') ));
+    it('Object', () => assert.throws(() => invertBoolean({a:1 , b: 2 }), new Error('Invalid type of argument') ));
+
 });
