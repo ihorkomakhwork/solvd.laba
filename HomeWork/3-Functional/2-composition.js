@@ -1,10 +1,19 @@
+const WORD_FORMAT = /^[a-zA-Zа-яА-Я]+$/; 
+
 const students = [
-    { name: 'Harry Potter', grade: 10 },
-    { name: 'Ron Weasley', grade: 10 },
-    { name: 'Hermione Granger', grade: 10 },
-    { name: 'Draco Malfoy', grade: 10 },
-    { name: 'Neville Longbottom', grade: 10 },
-];
+  {
+    name: 'Olena',
+    grades: [ 100, 100, 100 ],
+  },
+  {
+    name: 'Boris',
+    grades: [ 100, 100, 100 ],
+  },
+  {
+    name: 'Petr',
+    grades: [ 100, 100, 100 ],
+  }
+]
 
 const compose = (...fns) => argument => fns.reduceRight((result, fn) => fn(result), argument);
 
@@ -12,22 +21,16 @@ const getFullName = person => `${person.firstName} ${person.lastName}`;
 
 const sortAlphabetically = arr => arr.sort();
 
-const uniqueWords = text => [...new Set(text.split(' '))];
+const lowRegister = text => text.toLowerCase();
 
-const filterUniqueWords = compose(sortAlphabetically, uniqueWords);
+const unique = text => [...new Set(text.split(' '))];
 
-const averageOf = (sum, number) =>  sum / number;
+const format = text => text.filter(word => WORD_FORMAT.test(word));
 
-const sumGrades = students => students.reduce((sum, student) => sum + student.grade, 0);
+const filterUniqueWords = compose(sortAlphabetically, format , unique, lowRegister);
 
-const getAverageGrade = (students) => averageOf(sumGrades(students), students.length);
+const averageOfArray = arr => arr.reduce((sum, number) => sum + number, 0) / arr.length;;
 
+const allGrades = students => students.reduce( (result , student) => student.grades.concat(result) , []);
 
-// KEEP IT SIMPLE AND STUPID
-/*
-const getAverageGrade = students => {
-    const sum = students.reduce((sum, student) => sum + student.grade, 0);
-    const average = sum / students.length;
-    return average;
-};
-*/
+const getAverageGrade = compose(averageOfArray, allGrades);
