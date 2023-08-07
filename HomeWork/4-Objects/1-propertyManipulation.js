@@ -18,11 +18,13 @@ Object.keys(person).forEach((property) => {
   });
 });
 
+
 Object.defineProperty(person, "address", {
   value: {},
   writable: true, 
   enumerable: false,
   configurable: false,
 });
+
 
 module.exports = { person };
