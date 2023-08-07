@@ -8,24 +8,24 @@ const product =  Object.create({}, {
         value: 1000,
         writable: false,
         enumerable: false,
+        configurable: true,
     },
-    quantity: { value: 5}
+    quantity: { 
+        value: 5,
+        configurable: true,
+    }
 });
 
-//const getTotalPrice = (product) => {
-//    return product.price * product.quantity;
-//};
-//const total = getTotalPrice(product); 
-
-//TODO: TAS1
-//Implement a function called getTotalPrice that takes the product object as an argument and returns the total price (calculated as price * quantity). Ensure that the function accesses the non-enumerable properties directly using the Object.getOwnPropertyDescriptor method.
+const deleteNonConfigurable = (obj, porop) => {
+    const  descriptor = Object.getOwnPropertyDescriptor(obj, porop)
+    if (!descriptor) throw new Error("The property does not exist");
+    const { configurable } = descriptor;  
+    if (!configurable) throw new Error("The property is not configurable");
+    delete obj[porop];
+}
 
 const getTotalPrice = (product) => {
     const price = Object.getOwnPropertyDescriptor(product, "price");
     const quantity = Object.getOwnPropertyDescriptor(product, "quantity");
     return price.value * quantity.value;
 };
-
-
-
-debugger;
