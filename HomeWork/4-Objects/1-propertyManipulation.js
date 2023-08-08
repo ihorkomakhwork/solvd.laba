@@ -4,10 +4,12 @@ const person = {
     age: 30,
     email: "john.doe@example.com",
     updateInfo(newInfo) {
-        for(let key in newInfo) {
-            if(!this.hasOwnProperty(key)) throw new Error(`The property ${key} does not exist.`);
-            Object.defineProperty(this, key, { value: newInfo[key], writable: false });       
-        }
+      for(let key in newInfo) {
+        const descriptor = Object.getOwnPropertyDescriptor(this, key);   
+          if(!this.hasOwnProperty(key)) throw new Error(`The property ${key} does not exist.`);
+          if (!descriptor.writable) throw new Error(`The property ${key} is not writable.`);
+          Object.defineProperty(this, key, { value: newInfo[key], writable: false });       
+      }
     }
 };
 
@@ -18,13 +20,11 @@ Object.keys(person).forEach((property) => {
   });
 });
 
-
 Object.defineProperty(person, "address", {
   value: {},
   writable: true, 
   enumerable: false,
   configurable: false,
 });
-
 
 module.exports = { person };
