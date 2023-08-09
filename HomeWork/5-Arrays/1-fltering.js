@@ -24,8 +24,6 @@ const product = [
         price: Infinity,
         quantity: 0,
     },
-
-
 ];
 
 const arrayFilterUnique = (array, callback) =>  {
@@ -35,4 +33,4 @@ const arrayFilterUnique = (array, callback) =>  {
 
 const inStock = arrayFilterUnique(product, item => item.quantity > 0);
 
-console.log(inStock);
+module.exports = {arrayFilterUnique};
