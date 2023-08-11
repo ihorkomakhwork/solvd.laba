@@ -19,8 +19,7 @@ const observeObject = (obj, callback) => {
 const log = (property, kind, value ) => console.log(`${property}: \t ${kind} ${value ? value : '' }`.toUpperCase() );
 
 const observedPerson = observeObject(person, log);
-observedPerson.updateInfo({ age: 31, email: 'dscsdcsdc@sdsdcsdc.com' });
-observedPerson.updateInfo({ age: 50, firstName: 'Jhane' });
+
 observedPerson.children = [
     {
         firstName: 'John',
