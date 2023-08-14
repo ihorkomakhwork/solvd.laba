@@ -5,8 +5,17 @@
   "main": "index.js",
   "keywords": [],
   "workspaces": [
-  "HomeWork/*"
+    "HomeWork/*"
   ],
+  "scripts": {
+    "lint": "eslint ."
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6"
+  }
 }

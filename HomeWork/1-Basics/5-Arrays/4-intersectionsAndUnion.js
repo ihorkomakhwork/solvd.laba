@@ -1,10 +1,13 @@
+'use strict';
+
 const getArrayIntersection = (arrA, arrB) => {
   const intersection = [];
   arrA.forEach(element => {
     if (arrB.includes(element)) {
-      intersection.push(element);}    
+      intersection.push(element);
+    }
   });
-    return intersection;
+  return intersection;
 };
 
 const getArrayUnion = (arrA, arrB) => {
@@ -17,3 +20,4 @@ const getArrayUnion = (arrA, arrB) => {
   return [...new Set(union)];
 };
 
+exports.module = { getArrayIntersection, getArrayUnion };
