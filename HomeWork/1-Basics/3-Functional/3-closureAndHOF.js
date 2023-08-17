@@ -1,6 +1,9 @@
 'use strict';
 
-const createCounter = (counter = 0) => () => counter++;
+const createCounter =
+  (counter = 0) =>
+    () =>
+      counter++;
 
 const repeatFunction = (callback, n) => () => {
   if (n < 0) while (true) callback();

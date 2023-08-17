@@ -1,11 +1,12 @@
 ### Functional paradigm
+
 #### Task 1: Immutability and Pure Functions
 
 Implement a pure function called calculateDiscountedPrice that takes an array of products and a discount percentage as arguments. The function should return a new array of products with discounted prices based on the given percentage, without modifying the original products.
 
 Create a pure function called calculateTotalPrice that takes an array of products as an argument. The function should return the total price of all products, without modifying the original array or its items.
 
-####  Task 2: Function Composition and Point-Free Style
+#### Task 2: Function Composition and Point-Free Style
 
 Implement a function called getFullName that takes a person object with firstName and lastName properties. The function should return the person's full name in the format "FirstName LastName".
 
@@ -13,7 +14,7 @@ Create a function called filterUniqueWords that takes a string of text and retur
 
 Implement a function called getAverageGrade that takes an array of student objects, each containing a name and grades property. The function should return the average grade of all students, without modifying the original array or its items. Use function composition and point-free style.
 
-####  Task 3: Closures and Higher-Order Functions
+#### Task 3: Closures and Higher-Order Functions
 
 Create a function called createCounter that returns a closure. The closure should be a counter function that increments the count on each call and returns the updated count. Each closure should have its own independent count.
 
@@ -25,7 +26,7 @@ Implement a recursive function called calculateFactorial that calculates the fac
 
 Create a recursive function called power that takes a base and an exponent as arguments. The function should calculate the power of the base to the exponent using recursion.
 
-####  Task 5: Lazy Evaluation and Generators
+#### Task 5: Lazy Evaluation and Generators
 
 Implement a lazy evaluation function called lazyMap that takes an array and a mapping function. The function should return a lazy generator that applies the mapping function to each element of the array one at a time.
 

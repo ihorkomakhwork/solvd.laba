@@ -2,7 +2,7 @@
 
 const bankAccount = {
   ownwerName: 'John Wick',
-  _balance:  1000,
+  _balance: 1000,
   get formatedBalance() {
     return `$${this._balance}`;
   },
@@ -16,12 +16,12 @@ const bankAccount = {
     if (this.balance < amount) throw new Error('Insufficient funds');
     this.balance -= amount;
     account.balance += amount;
-  }
+  },
 };
 
 const bankAccount2 = {
   ownwerName: 'Blade Runner',
-  _balance:  300,
+  _balance: 300,
   get formatedBalance() {
     return `$${this._balance}`;
   },
@@ -36,7 +36,7 @@ const bankAccount2 = {
     if (this.balance < amount) throw new Error('Insufficient funds');
     this.balance -= amount;
     account.balance += amount;
-  }
+  },
 };
 
 bankAccount.transfer(100, bankAccount2);

@@ -16,7 +16,6 @@ const objectDeepCloning = inputObject => {
         const result = clone(value);
         output.push(result);
       }
-
     } else if (type === 'object') {
       output = {};
       visited.set(input, output);

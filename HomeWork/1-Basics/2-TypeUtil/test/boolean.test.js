@@ -13,7 +13,12 @@ describe('invertBoolean', () => {
     const result = invertBoolean(false);
     assert.equal(result, true);
   });
-  it('Number', () => assert.throws(() => invertBoolean(123), new Error('Invalid type of argument')));
-  it('Object', () => assert.throws(() => invertBoolean({ a: 1, b: 2 }), new Error('Invalid type of argument')));
-
+  it('Number', () =>
+    assert.throws(() => invertBoolean(123),
+      new Error('Invalid type of argument')));
+  it('Object', () =>
+    assert.throws(
+      () => invertBoolean({ a: 1, b: 2 }),
+      new Error('Invalid type of argument'),
+    ));
 });

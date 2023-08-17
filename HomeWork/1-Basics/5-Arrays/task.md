@@ -1,4 +1,5 @@
 ### Arrays
+
 #### Task 1: Advanced Array Filtering
 
 1. Create a function called `customFilterUnique` that takes an array and a callback function as arguments. The `customFilterUnique` function should filter the array using the callback function to determine uniqueness. The resulting array should contain only unique elements based on the callback's logic.

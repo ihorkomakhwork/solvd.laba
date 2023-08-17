@@ -1,6 +1,5 @@
 'use strict';
 
-
 const { validateType } = require('./validation.js');
 
 const convertToNumber = value => {

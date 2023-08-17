@@ -1,6 +1,5 @@
 'use strict';
 
-
 const stringifyValue = value => {
   const type = typeof value;
   if (type === 'object') return JSON.stringify(value);

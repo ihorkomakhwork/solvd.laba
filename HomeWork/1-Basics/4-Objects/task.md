@@ -1,34 +1,39 @@
 ### Homework 4
+
 #### Task 1: Object Property Manipulation
 
-Create an object called person with the following properties and values: 
+Create an object called person with the following properties and values:
+
 ```js
- { 
-    firstName: "John", 
-    lastName: "Doe", 
+ {
+    firstName: "John",
+    lastName: "Doe",
     age: 30,
     email: "john.doe@example.com",
 }
-``` 
+```
+
 Use property descriptors to make all properties of the person object read-only and non-writable, so their values cannot be changed directly.
 
-Implement a method called updateInfo on the person object that takes a new info object as an argument. The info object should contain updated values for any of the properties (e.g., ``` { firstName: "Jane", age: 32 }) ```. Ensure that this method adheres to the read-only property descriptor set earlier.
+Implement a method called updateInfo on the person object that takes a new info object as an argument. The info object should contain updated values for any of the properties (e.g., `{ firstName: "Jane", age: 32 })`. Ensure that this method adheres to the read-only property descriptor set earlier.
 
 Create a new property called address on the person object with an initial value of an empty object. Make this property non-enumerable and non-configurable.
 
 #### Task 2: Object Property Enumeration and Deletion
 
-Create a new object called product with the following properties and values: 
+Create a new object called product with the following properties and values:
+
 ```js
-{  
+{
    name: "Laptop",
    price: 1000,
-   quantity: 5, 
+   quantity: 5,
 }
 ```
+
 Use property descriptors to make the price and quantity properties non-enumerable and non-writable.
 
-Implement a function called getTotalPrice that takes the product object as an argument and returns the total price (calculated as price * quantity). Ensure that the function accesses the non-enumerable properties directly using the Object.getOwnPropertyDescriptor method.
+Implement a function called getTotalPrice that takes the product object as an argument and returns the total price (calculated as price \* quantity). Ensure that the function accesses the non-enumerable properties directly using the Object.getOwnPropertyDescriptor method.
 
 Implement a function called deleteNonConfigurable that takes an object and a property name as arguments. The function should delete the specified property from the object if it exists. If the property is non-configurable, throw an error with an appropriate message.
 
@@ -58,4 +63,4 @@ Implement a function called deepCloneObject that takes an object as an argument 
 
 #### Task 7: Object Property Validation
 
-Implement a function called validateObject that takes an object and a validation schema as arguments. The schema should define the required properties, their types, and any additional validation rules. The function should return true if the object 
+Implement a function called validateObject that takes an object and a validation schema as arguments. The schema should define the required properties, their types, and any additional validation rules. The function should return true if the object

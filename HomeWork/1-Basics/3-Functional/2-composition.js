@@ -5,19 +5,21 @@ const WORD_FORMAT = /^[a-zA-Zа-яА-Я]+$/;
 const students = [
   {
     name: 'Olena',
-    grades: [ 100, 100, 100 ],
+    grades: [100, 100, 100],
   },
   {
     name: 'Boris',
-    grades: [ 100, 100, 100 ],
+    grades: [100, 100, 100],
   },
   {
     name: 'Petr',
-    grades: [ 100, 100, 100 ],
-  }
+    grades: [100, 100, 100],
+  },
 ];
 
-const compose = (...fns) => argument => fns.reduceRight((result, fn) => fn(result), argument);
+const compose =
+  (...fns) => argument =>
+    fns.reduceRight((result, fn) => fn(result), argument);
 
 const getFullName = person => `${person.firstName} ${person.lastName}`;
 
@@ -33,7 +35,8 @@ const filterUniqueWords = compose(sortAlphabetically, format, unique, lowRegiste
 
 const averageOfArray = arr => arr.reduce((sum, number) => sum + number, 0) / arr.length;
 
-const allGrades = students => students.reduce((result, student) => student.grades.concat(result), []);
+const allGrades = students =>
+  students.reduce((result, student) => student.grades.concat(result), []);
 
 const getAverageGrade = compose(averageOfArray, allGrades);
 

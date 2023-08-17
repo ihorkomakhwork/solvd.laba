@@ -1,5 +1,7 @@
 'use strict';
 
-const name = 'Jn';
+function foo() {
+  console.log('hello');
+}
 
-console.log('Hello ' + name + '!');
+module.exports = { foo };

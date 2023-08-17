@@ -1,2 +1,3 @@
 # solvd.laba
-This is repository for Node.js cource by Solvd inc. 
+
+This is repository for Node.js cource by Solvd inc.

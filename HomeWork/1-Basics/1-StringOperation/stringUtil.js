@@ -7,7 +7,6 @@ const plus = (argA, argB) => {
   let j = argB.length - 1;
 
   while (i >= 0 || j >= 0 || carry !== 0) {
-
     const digitA = i >= 0 ? parseInt(argA[i]) : 0;
     const digitB = j >= 0 ? parseInt(argB[j]) : 0;
     const sum = digitA + digitB + carry;
@@ -71,7 +70,6 @@ const multiply = (argA, argB) => {
 
   return result.join('');
 };
-
 
 const divide = (argA, argB) => {
   let result = '';

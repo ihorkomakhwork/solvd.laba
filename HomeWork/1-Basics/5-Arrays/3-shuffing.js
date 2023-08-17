@@ -11,5 +11,4 @@ const customShuffle = array => {
   return result;
 };
 
-
 module.exports = { customShuffle };

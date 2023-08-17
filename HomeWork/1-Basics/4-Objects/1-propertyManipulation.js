@@ -9,17 +9,21 @@ const person = {
   updateInfo(newInfo) {
     for (const key in newInfo) {
       const descriptor = Object.getOwnPropertyDescriptor(this, key);
-      if (!this.hasOwnProperty(key)) throw new Error(`The property ${key} does not exist.`);
+      if (!this.hasOwnProperty(key))
+        throw new Error(`The property ${key} does not exist.`);
       if (!descriptor.writable) throw new Error(`The property ${key} is not writable.`);
-      Object.defineProperty(this, key, { value: newInfo[key], writable: false });
+      Object.defineProperty(this, key, {
+        value: newInfo[key],
+        writable: false,
+      });
     }
-  }
+  },
 };
 
 Object.keys(person).forEach(property => {
   Object.defineProperty(person, property, {
     value: person[property],
-    writable: false
+    writable: false,
   });
 });
 

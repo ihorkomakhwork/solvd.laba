@@ -25,7 +25,7 @@ const createImmutableObject = input => {
       const immutableObject = createImmutableObject(value);
       Object.defineProperty(output, key, {
         value: immutableObject,
-        ...IMMUTABLE_OPTIONS
+        ...IMMUTABLE_OPTIONS,
       });
     }
   } else return input;
@@ -36,7 +36,7 @@ person.address = {
   city: 'London',
   country: 'England',
   street: 'Baker Street',
-  postaCodes: [ 'NW1 6XE', 'NW1 6XL' ]
+  postaCodes: ['NW1 6XE', 'NW1 6XL'],
 };
 
 const immutablePerson = createImmutableObject(person);

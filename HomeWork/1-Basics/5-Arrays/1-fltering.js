@@ -28,7 +28,7 @@ const product = [
   },
 ];
 
-const arrayFilterUnique = (array, callback) =>  {
+const arrayFilterUnique = (array, callback) => {
   const filtered = array.filter(callback);
   return [...new Set(filtered)];
 };

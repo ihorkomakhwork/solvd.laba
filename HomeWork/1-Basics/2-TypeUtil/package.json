@@ -1,14 +1,14 @@
 {
   "name": "2-typeutil",
   "version": "1.0.0",
-  "description": "", 
+  "description": "",
   "main": "typeUtil.js",
   "exports": {
-      ".": {
+    ".": {
       "require": "./typeUtil.js",
       "import": "./typeUtil.mjs"
-      }
-     },
+    }
+  },
   "directories": {
     "lib": "lib",
     "test": "test"

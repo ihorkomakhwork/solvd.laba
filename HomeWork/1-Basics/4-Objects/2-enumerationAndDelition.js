@@ -1,25 +1,28 @@
 'use strict';
 
-const product =  Object.create({}, {
-  name: {
-    value: 'Laptop',
-    writable: false,
-    enumerable: false,
+const product = Object.create(
+  {},
+  {
+    name: {
+      value: 'Laptop',
+      writable: false,
+      enumerable: false,
+    },
+    price: {
+      value: 1000,
+      writable: false,
+      enumerable: false,
+      configurable: true,
+    },
+    quantity: {
+      value: 5,
+      configurable: true,
+    },
   },
-  price: {
-    value: 1000,
-    writable: false,
-    enumerable: false,
-    configurable: true,
-  },
-  quantity: {
-    value: 5,
-    configurable: true,
-  }
-});
+);
 
 const deleteNonConfigurable = (obj, porop) => {
-  const  descriptor = Object.getOwnPropertyDescriptor(obj, porop);
+  const descriptor = Object.getOwnPropertyDescriptor(obj, porop);
   if (!descriptor) throw new Error('The property does not exist');
   const { configurable } = descriptor;
   if (!configurable) throw new Error('The property is not configurable');

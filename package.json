@@ -4,9 +4,7 @@
   "description": "This is repository for Node.js cource by Solvd inc.",
   "main": "index.js",
   "keywords": [],
-  "workspaces": [
-    "HomeWork/*"
-  ],
+  "workspaces": ["HomeWork/*"],
   "scripts": {
     "lint": "eslint ."
   },
@@ -16,6 +14,9 @@
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.1",
     "typescript": "^5.1.6"
   }
 }
