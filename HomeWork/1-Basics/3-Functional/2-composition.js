@@ -1,4 +1,4 @@
-'use strict';
+
 
 const WORD_FORMAT = /^[a-zA-Zа-яА-Я]+$/;
 
@@ -17,9 +17,9 @@ const students = [
   },
 ];
 
-const compose =
-  (...fns) => argument =>
-    fns.reduceRight((result, fn) => fn(result), argument);
+const compose = (...fns) =>
+  argument => fns.reduceRight(
+    (result, fn) => fn(result), argument);
 
 const getFullName = person => `${person.firstName} ${person.lastName}`;
 

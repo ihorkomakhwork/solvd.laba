@@ -1,4 +1,4 @@
-'use strict';
+
 
 const stringifyValue = value => {
   const type = typeof value;

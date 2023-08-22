@@ -1,4 +1,4 @@
-'use strict';
+
 
 const createCounter =
   (counter = 0) =>

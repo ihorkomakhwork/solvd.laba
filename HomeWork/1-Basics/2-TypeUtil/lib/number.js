@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { validateType } = require('./validation.js');
 

@@ -1,4 +1,4 @@
-'use strict';
+
 
 const bankAccount = {
   ownwerName: 'John Wick',

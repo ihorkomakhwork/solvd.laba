@@ -1,4 +1,4 @@
-'use strict';
+
 
 const chunkArray = (array, chunkSize) => {
   const result = [];

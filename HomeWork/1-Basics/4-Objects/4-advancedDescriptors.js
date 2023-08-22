@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { person } = require('./1-propertyManipulation.js');
 const { linkedTypeOf } = require('../2-TypeUtil');

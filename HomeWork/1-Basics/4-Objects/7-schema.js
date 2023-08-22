@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { isEqualType } = require('../2-TypeUtil');
 

@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { linkedTypeOf } = require('../2-TypeUtil');
 

@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { convertToNumber } = require('./number.js');
 const { stringifyValue } = require('./string.js');

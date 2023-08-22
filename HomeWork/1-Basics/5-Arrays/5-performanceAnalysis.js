@@ -1,4 +1,4 @@
-'use strict';
+
 
 const { customShuffle } = require('./3-shuffing.js');
 const measureArrayPerformance = (fn, array) => {

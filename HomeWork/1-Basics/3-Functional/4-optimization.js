@@ -1,4 +1,4 @@
-'use strict';
+
 
 const calculateFactorial = (num, acc = 1) => {
   if (num === 0 || num === 1) {

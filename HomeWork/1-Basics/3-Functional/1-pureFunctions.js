@@ -1,4 +1,4 @@
-'use strict';
+
 
 const products = [
   { name: 'HeadPhones Sound-3000', price: 1 },

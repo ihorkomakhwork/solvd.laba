@@ -1,4 +1,4 @@
-'use strict';
+
 
 const customShuffle = array => {
   const result = [...array];

@@ -1,5 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-'use strict';
+
 
 const person = {
   firstName: 'John',

@@ -1,4 +1,4 @@
-'use strict';
+
 
 const plus = (argA, argB) => {
   let result = '';
