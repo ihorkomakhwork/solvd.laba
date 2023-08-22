@@ -56,7 +56,6 @@ const log = (message: string) => {
 }
 
 {
-
   log('Currying');
   const multiply = (a: number, b: number, c: number) => a * b * c;
   const curriedMultiply = curry(multiply, 3);
