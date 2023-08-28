@@ -36,7 +36,6 @@ const log = (message: string) => {
   console.log(toEn`${greeting}! ${introduction}`);
 }
 
-
 {
   log('Highlight Keywords');
   const keywords = ['JavaScript', 'template', 'tagged'];
@@ -63,5 +62,4 @@ const log = (message: string) => {
   const result = curriedMultiply(2, 3, 4);
 
   console.log('Result:', result); // Expected: 24
-
 }

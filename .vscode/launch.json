@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\HomeWork\\4-Objects\\3-gettersAndSetters.js"
+      "program": "${workspaceFolder}//dist//2-Block//1-PerformanceAnalysis//test.js"
     }
   ]
 }
