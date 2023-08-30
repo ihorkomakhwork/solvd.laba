@@ -1,7 +1,7 @@
 type debouncedFn =  (fn: Function, delay: number)  => (...args: string[]) => void;
 
 const debounce: debouncedFn = (fn, delay) => {
-  let timerId: number;
+  let timerId;
   return (...args) => {
     clearTimeout(timerId);
     timerId = setTimeout(() => fn(...args), delay);
