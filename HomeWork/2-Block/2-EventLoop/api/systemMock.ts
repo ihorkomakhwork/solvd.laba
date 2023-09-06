@@ -1,6 +1,5 @@
 import  {EventMultiplexor, IEvent, TEventsName, isEvent } from '../libuv/EventMultiplexor'; 
 
-// to understand in future
 type TAsyncAPI = {
     [key in TEventsName]: any;
 };

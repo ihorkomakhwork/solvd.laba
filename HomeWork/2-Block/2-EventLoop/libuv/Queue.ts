@@ -35,44 +35,6 @@ export class EventQueue {
         this.timeout.clear();
         this.setImmediate.clear();
     }
-
-    
-    
-    // public addToFs(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._fs.set(id, event);
-    // }
-    
-    // public addToNetwork(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._network.set(id, event);
-    // }
-
-    // public addToExit(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._exit.set(id, event);
-    // }
-
-    // public addToPromise(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._promise.set(id, event);
-    // }
-
-    // public addToNextTick(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._nextTick.set(id, event);
-    // }
-
-    // public addToTimeout(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._timeout.set(id, event);
-    // }
-
-    // public addToImmediate(event: IEvent ) {
-    //     const id = this.generateId();
-    //     this._tImmediate.set(id, event);
-    // }
-
 }
 
 

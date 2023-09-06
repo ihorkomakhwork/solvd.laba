@@ -18,7 +18,6 @@ export class EventLoop {
 
             }
             this.itetation();
-            //this.queue.clearAll();
         }
     }
     
