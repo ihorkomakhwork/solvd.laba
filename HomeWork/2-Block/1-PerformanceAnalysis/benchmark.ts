@@ -41,7 +41,6 @@ export const generateReport = ( generateFn: GenerateRow ,  max: number, step: nu
         const range = generateFn(i);
         const row = generateRow(range);
         report.push(row);
-
     }
     return report;
 };

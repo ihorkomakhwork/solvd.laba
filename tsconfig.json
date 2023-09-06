@@ -14,5 +14,5 @@
     "excludeDirectories": ["**/node_modules", "_build"],
     "excludeFiles": ["build/fileWhichChangesOften.ts"]
   },
-  "include": [ "HomeWork/**/*.ts" ]
+  "include": [ "HomeWork/**/*.ts", "HomeWork/2-Block/2-EventLoop/userspace/app.ts" ]
 }
