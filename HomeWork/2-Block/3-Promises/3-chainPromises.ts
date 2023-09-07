@@ -1,5 +1,5 @@
-export const chainPromises = (promises: Array<(value: any) => any>): Promise<any> => {
-        let promiseChain: Promise<any>  = Promise.resolve();
-        promises.forEach((func) => promiseChain = promiseChain.then(func));
-        return promiseChain;
-}
+export const chainPromises = (promises: Array<(value: any) => any>): Promise<any> =>  promises
+                                 .reduce((acc: Promise<any> ,func) => acc = acc
+                                 .then(func)
+                                 .catch(error => error), 
+                                        Promise.resolve());

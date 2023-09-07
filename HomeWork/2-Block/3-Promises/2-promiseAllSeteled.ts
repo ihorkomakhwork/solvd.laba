@@ -4,21 +4,19 @@ interface PromiseAllSettledResult {
     reason?: Error;
 }
 
-export const promiseAllSettled = (promises) => {
-    return new Promise(resolve => {
-        const result: Array<PromiseAllSettledResult> = [];
-        promises.forEach((promise, counter) => {
-            promise.then((res) => {
-                result[counter] = { status: "resolved", value: res };
-                counter++;
-                if (counter === promises.length)
-                    resolve(result);
-            }).catch((err) => {
-                result[counter] = { status: "rejected", reason: err };
-                counter++;
-                if (counter === promises.length)
-                    resolve(result);
-            });
-        });
-    });
-};
+export const promiseAllSettled = (promises: Promise<any>[]) =>  new Promise((resolve, reject) => {
+    promises.reduce((acc, promise) => promise.then(value => {
+        console.log(value);
+        return acc.then(state => {
+            return [...state, { status: "resolved", value: value
+            }];
+        }
+        );
+    }).catch(error => {
+        return acc.then(state => {
+            return [...state, { status: "rejected", reason: error }];
+        }
+        );
+    }
+    ), Promise.resolve([])).then(finall=> resolve(finall))
+});

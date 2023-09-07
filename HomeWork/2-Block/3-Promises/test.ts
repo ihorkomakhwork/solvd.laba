@@ -24,10 +24,10 @@ console.log("=== Promises ===");
 
 /* === Promise all seteled === */
 {
-    const delay = (ms, value) => new Promise(res => setTimeout(() => res(value), ms)); 
+   //const delay = (ms, value) => new Promise(res => setTimeout(() => res(value), ms)); 
     
-    const promises = [  delay(3000, 'a'),  delay(1000, 'b'),  delay(2000, 'c')];
-    //const promises = [ Promise.resolve(1),Promise.reject("Error occurred"),Promise.resolve(3)];
+   // const promises = [  delay(3000, 'a'),  delay(1000, 'b'),  delay(2000, 'c')];
+    const promises = [ Promise.resolve(1),Promise.reject("Error occurred"),Promise.resolve(3)];
     
       promiseAllSettled(promises)
         .then(results => {
