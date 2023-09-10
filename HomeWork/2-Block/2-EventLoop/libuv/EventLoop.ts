@@ -15,13 +15,12 @@ export class EventLoop {
                 const q = this.queue[name];  
                 q.add(multiplexorEvent);
                 this.events.delete(multiplexorEvent);
-
             }
-            this.itetation();
+            this.iteration();
         }
     }
     
-    private itetation(): void {
+    private iteration(): void {
             const { fs, network, exit, promise, nextTick ,timeout, setImmediate } = this.queue;
             const queues = [timeout , network, fs, setImmediate ,exit];
             const emergency = [promise, nextTick];
