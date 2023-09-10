@@ -7,12 +7,15 @@ console.log("=== Promises ===");
 
 /* === Promise All === */
 {
-    const promises = [
-        Promise.resolve(1),
-        Promise.resolve(2),
-        Promise.resolve(3)
-      ];
-      
+    const delay = (ms, value) => new Promise(res => setTimeout(() => res(value), ms)); 
+    const promises = [  delay(3000, 'a'),  delay(1000, 'b'),  delay(2000, 'c')];
+    
+    // const promises = [
+    //     Promise.resolve(1),
+    //     Promise.resolve(2),
+    //     Promise.resolve(3)
+    //   ];
+    
     promiseAll(promises)
         .then(results => console.log("All promises resolved:", results)) // Expected: [1, 2, 3]
         .catch(error => console.error("At least one promise rejected:", error));
@@ -21,12 +24,11 @@ console.log("=== Promises ===");
 
 /* === Promise all seteled === */
 {
-    const promises = [
-        Promise.resolve(1),
-        Promise.reject("Error occurred"),
-        Promise.resolve(3)
-      ];
-      
+   //const delay = (ms, value) => new Promise(res => setTimeout(() => res(value), ms)); 
+    
+   // const promises = [  delay(3000, 'a'),  delay(1000, 'b'),  delay(2000, 'c')];
+    const promises = [ Promise.resolve(1),Promise.reject("Error occurred"),Promise.resolve(3)];
+    
       promiseAllSettled(promises)
         .then(results => {
           console.log("All promises settled:", results);
@@ -34,7 +36,9 @@ console.log("=== Promises ===");
           //            { status: 'rejected', reason: 'Error occurred' },
           //            { status: 'resolved', value: 3 }]
         });
-}
+    
+        
+    }
 
 /* === Promise chain === */
 
