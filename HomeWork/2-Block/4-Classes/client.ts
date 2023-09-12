@@ -14,6 +14,7 @@ const api = (palace, method) => async (...args) => {
     return res.json();
     }
 
+// Scaffolding for API
 const API = {
     createCustomer: api('customer', 'create'),
     readCustomer: api('customer', 'read'),
@@ -61,6 +62,7 @@ const addItems = async () => {
 
 (async () => {
     try {
+    // Simulate the work of the client of bookstore
     //============================================
     //1. Add books to catalog
     //await createteBooks();

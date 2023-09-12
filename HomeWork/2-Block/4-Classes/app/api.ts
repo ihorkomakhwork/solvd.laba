@@ -4,6 +4,7 @@ import { BookList } from "./core/bookList";
 import { Order } from "./core/order";
 import { Customer } from "./core/customer";
 
+// routing API for all entities  
 export default class API {
     constructor(
         public readonly book: Book = new Book(),

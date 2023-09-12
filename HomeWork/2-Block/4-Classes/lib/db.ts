@@ -3,6 +3,8 @@ import pg from 'pg';
 
 const pool = new pg.Pool(config.db);
 
+// This class is our own query builder for more convenient work with database
+// It's help us to give more appropriete and flexible interface  
 export class Database {
   table: string;
   constructor (table: string) {

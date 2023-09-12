@@ -1,7 +1,9 @@
 import { Database } from '../../lib/db';
 
+//We implement the CRUD class, this is the base class for all classes that implement CRUD contract.
+// In future we will rely on the fact that all classes that implement CRUD contract will have the same methods.
+// In this case we will be able to use polymorphism.
 export abstract class CRUD<T> {
-
     protected db: any;
 
     protected table: string = '';
