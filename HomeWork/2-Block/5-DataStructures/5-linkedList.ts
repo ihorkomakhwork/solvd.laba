@@ -44,6 +44,7 @@ export class LinkedList<T> {
     }
 
     find(element: T): boolean {
+        console.log(this.element, element);
         if (this.element === element) {
             return true;
         }
@@ -51,5 +52,13 @@ export class LinkedList<T> {
             return false;
         }
         return this.next.find(element);
+    }
+    
+    *[Symbol.iterator](): Generator<any, void, void> {;
+        let current: any = this;
+        while (current !== null) {
+          yield current.element as any;
+          current = current.next;
+        }
     }
 };  
